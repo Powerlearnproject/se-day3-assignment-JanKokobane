@@ -1,0 +1,392 @@
+.products {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.products.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.textContent {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.topper {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: wheat;
+  background: #fbbf24;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+/* Highlighted part */
+.titleHighlight {
+  color: #fbbf24; /* Gold text */
+  -webkit-text-fill-color: #fbbf24; /* Override gradient for this span */
+  background: none;
+  position: relative;
+  display: inline-block;
+}
+
+.titleHighlight::after {
+  content: '';
+  position: absolute;
+  bottom: -0.4rem;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+  border-radius: 3px;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.8s ease;
+}
+
+.titleHighlight.visible::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+
+.description {
+  font-size: 1.125rem;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.categoryButton {
+  background: white;
+  border: 2px solid #e5e7eb;
+  color: #2c2e3193;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 100;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.categoryButton:hover {
+  color: rgb(22, 19, 19);
+  transform: translateY(-2px);
+}
+
+.categoryButton.active {
+  background: #03060c;
+  border-color: #060d1d;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px #272624;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.productCard {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  opacity: 0;
+  animation: slideUp 0.6s ease forwards;
+}
+
+.productCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.productCard.featured {
+  border: 2px solid #f59e0b;
+}
+
+.featuredBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #f59e0b;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  z-index: 10;
+}
+
+.starIcon {
+  width: 12px;
+  height: 12px;
+}
+
+.imageContainer {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.productImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.productCard:hover .productImage {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(37, 99, 235, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.productCard:hover .overlay {
+  opacity: 1;
+}
+
+.viewButton {
+  background: white;
+  color: #2563eb;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.viewButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+.arrowIcon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.viewButton:hover .arrowIcon {
+  transform: translateX(4px);
+}
+
+.productInfo {
+  padding: 1.5rem;
+}
+
+.productHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.productName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+  flex: 1;
+}
+
+.category {
+  background: #f3f4f6;
+  color: #6b7280;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+
+.productDescription {
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.actionSection {
+  text-align: center;
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contactText {
+  font-size: 1.125rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.consultationButton {
+  background: #8B4513;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.consultationButton:hover {
+  background: #a0522d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
+}
+
+.buttonIcon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.consultationButton:hover .buttonIcon {
+  transform: translateX(4px);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .products {
+    padding: 80px 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .productsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .productCard {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+
+  .categories {
+    gap: 0.25rem;
+  }
+
+  .categoryButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .actionSection {
+    padding: 2rem 1rem;
+  }
+
+  .consultationButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .productHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .category {
+    margin-left: 0;
+  }
+
+  .categories {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categoryButton {
+    width: 100%;
+    max-width: 200px;
+  }
+}
