@@ -184,8 +184,8 @@ const Contact: React.FC = () => {
           </div>
           <div className={styles.info}>
             <span className={styles.topper}>Contact</span>
-            <span className={styles.detail}>M: 066 033 9993</span>
-            <span className={styles.detail}>E: crystalfaithprojects@gmail.com</span>
+            <span className={styles.detail}>Phone: +2766 053 9993</span>
+            <span className={styles.detail}>Email: crystalfaithprojects@gmail.com</span>
           </div>
         </div>
       </div>

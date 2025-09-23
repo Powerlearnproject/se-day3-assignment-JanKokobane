@@ -3,6 +3,8 @@ import { Target } from 'lucide-react';
 import styles from './About.module.css';
 import AboutImage from '../../assets/About.jpg'
 import ourMission from '../../assets/HeroSlide (4).jpg'
+import Image1 from '../../assets/cfp.jpg'
+import Image2 from '../../assets/cfp2.jpg'
 
 const About: React.FC = () => {
   const values = [
@@ -28,17 +30,12 @@ const About: React.FC = () => {
     {
       name: 'Master Craftsperson',
       role: 'Lead Designer & Builder',
-      image: 'https://images.pexels.com/photos/5974067/pexels-photo-5974067.jpeg'
+      image: Image1
     },
     {
       name: 'Senior Craftsperson',
       role: 'Installation Specialist',
-      image: 'https://images.pexels.com/photos/5974066/pexels-photo-5974066.jpeg'
-    },
-    {
-      name: 'Project Manager',
-      role: 'Client Relations',
-      image: 'https://images.pexels.com/photos/5974068/pexels-photo-5974068.jpeg'
+      image: Image2
     }
   ];
 

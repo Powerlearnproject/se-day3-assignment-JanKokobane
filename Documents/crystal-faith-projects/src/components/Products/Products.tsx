@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Star } from 'lucide-react';
 import styles from './Products.module.css';
+import Image1 from '../../assets/CustomCupboards.jpg'
+import Image2 from '../../assets/ShoeRacks.jpg'
+import Image4 from '../../assets/HeroSlide (3).jpg'
+import Image5 from '../../assets/mordenBedsidePedestals.jpg'
+import Image6 from '../../assets/modernHeadboards.jpg'
+import Image7 from '../../assets/smallmodernWineRacks.jpg'
+import Image8 from '../../assets/modernWardrobes.jpg'
 
 interface Product {
   id: number;
@@ -24,7 +31,7 @@ const Products: React.FC = () => {
       name: 'Custom Cupboards',
       description: 'Handcrafted storage solutions tailored to your space and style preferences.',
       category: 'Storage',
-      image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=500',
+      image: Image1,
       featured: true
     },
     {
@@ -32,7 +39,7 @@ const Products: React.FC = () => {
       name: 'Shoe Racks',
       description: 'Organized shoe storage systems that keep your entryway neat and stylish.',
       category: 'Storage',
-      image: 'https://images.pexels.com/photos/4207892/pexels-photo-4207892.jpeg?auto=compress&cs=tinysrgb&w=500',
+      image: Image2,
       featured: false
     },
     {
@@ -48,7 +55,7 @@ const Products: React.FC = () => {
       name: 'TV Stands',
       description: 'Modern entertainment centers with cable management and storage options.',
       category: 'Furniture',
-      image: 'https://images.pexels.com/photos/6585751/pexels-photo-6585751.jpeg?auto=compress&cs=tinysrgb&w=500',
+      image: Image4,
       featured: false
     },
     {
@@ -56,7 +63,7 @@ const Products: React.FC = () => {
       name: 'Bedside Pedestals',
       description: 'Stylish nightstands with drawers and compartments for bedroom essentials.',
       category: 'Bedroom',
-      image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=500',
+      image: Image5,
       featured: false
     },
     {
@@ -64,7 +71,7 @@ const Products: React.FC = () => {
       name: 'Headboards',
       description: 'Custom headboards that transform your bedroom into a luxurious retreat.',
       category: 'Bedroom',
-      image: 'https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=500',
+      image: Image6,
       featured: true
     },
     {
@@ -72,7 +79,7 @@ const Products: React.FC = () => {
       name: 'Wine Racks',
       description: 'Elegant wine storage solutions for wine enthusiasts and collectors.',
       category: 'Storage',
-      image: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=500',
+      image: Image7,
       featured: false
     },
     {
@@ -80,7 +87,7 @@ const Products: React.FC = () => {
       name: 'Wardrobes',
       description: 'Spacious wardrobes with customizable compartments and hanging space.',
       category: 'Storage',
-      image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=500',
+      image: Image8,
       featured: true
     }
   ]);

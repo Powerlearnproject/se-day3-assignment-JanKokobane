@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronRight } from 'lucide-react';
 import styles from './Hero.module.css';
+import Image1 from '../../assets/kitckenunit.jpg'
+import Image2 from '../../assets/HeroSlide (2).jpg'
+import Image3 from '../../assets/HeroSlide (3).jpg'
 
 const Hero: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -15,17 +18,17 @@ const Hero: React.FC = () => {
   // Slideshow images - using high-quality stock photos
   const slides = [
     {
-      image: "https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop",
+      image: Image1,
       title: "Craft with Purpose",
       text: "We design and build furniture that lasts—reducing waste and promoting mindful material use in every project."
     },
     {
-      image: "https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop",
+      image: Image2,
       title: "Build for Better Living",
       text: "Our installations and fittings are optimized for energy-efficient homes and sustainable lifestyles."
     },
     {
-      image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop",
+      image: Image3,
       title: "Transform Spaces",
       text: "From custom cupboards to ceiling installations, we bring your vision to life with precision and care."
     }

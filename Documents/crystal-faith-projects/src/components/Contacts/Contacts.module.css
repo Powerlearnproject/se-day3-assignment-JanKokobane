@@ -279,13 +279,13 @@
   }
 
   .info .topper {
-    font-size: 0.875rem;
+    font-size: 1rem;
     margin-bottom: 0.75rem;
     display: block;
   }
 
   .detail {
-    font-size: 1.25rem;
+    font-size: 0.8rem;
     font-weight: 700;
     line-height: 1.2em;
     color: var(--bodyTextColor);
@@ -431,4 +431,10 @@
     margin: 0 auto;
     transform: translateX(-22rem);
   }
+}
+
+@media (max-width: 768px) {
+ .container {
+  width: 80%;
+ }
 }

@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import './Services.css'
+import Image1 from '../../assets/insatllingcelling.jpg'
+import Image2 from '../../assets/installingadoor.jpg'
+import Image3 from '../../assets/KitchenUnits&WardrobeFitting.jpg'
+import Image4 from '../../assets/PaintingServices.jpg'
 
 const servicesData = [
   {
     title: 'Ceiling Installation',
     description: 'Professional ceiling installation services including suspended ceilings, plasterboard, and decorative finishes with precision and quality.',
     features: ['Suspended Ceilings', 'Plasterboard', 'Decorative Finishes'],
-    image: 'https://images.pexels.com/photos/6474471/pexels-photo-6474471.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: Image1,
     benefits: [
       'Professional Assessment',
       'Quality Materials',
@@ -20,7 +24,7 @@ const servicesData = [
     title: 'Door Installation',
     description: 'Expert door fitting services for interior and exterior doors with precise measurements, quality hardware, and perfect alignment.',
     features: ['Interior Doors', 'Exterior Doors', 'Quality Hardware'],
-    image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: Image2,
     benefits: [
       'Precise Measurements',
       'Quality Hardware',
@@ -33,7 +37,7 @@ const servicesData = [
     title: 'Kitchen Units & Wardrobe Fitting',
     description: 'Custom kitchen units and wardrobe installation with meticulous attention to detail, perfect measurements, and flawless finish.',
     features: ['Custom Design', 'Perfect Fit', 'Premium Finish'],
-    image: 'https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: Image3,
     benefits: [
       'Custom Design',
       'Perfect Measurements',
@@ -46,7 +50,7 @@ const servicesData = [
     title: 'Painting Services',
     description: 'Professional interior and exterior painting services using premium materials for a durable, beautiful, and long-lasting finish.',
     features: ['Interior Painting', 'Exterior Painting', 'Premium Materials'],
-    image: 'https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: Image4,
     benefits: [
       'Premium Paint',
       'Color Consultation',
@@ -125,10 +129,19 @@ const Services: React.FC = () => {
                       ))}
                     </ul>
                     
-                    <button className="learn-more-btn">
+                    <button
+                      className="learn-more-btn"
+                      onClick={() => {
+                        const contactSection = document.getElementById('contact');
+                        if (contactSection) {
+                          contactSection.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
+                    >
                       <span>Get Quote</span>
                       <ArrowRight className="btn-icon" />
                     </button>
+
                   </div>
                 </div>
               </div>

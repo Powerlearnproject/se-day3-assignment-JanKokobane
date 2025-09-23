@@ -249,3 +249,74 @@
     right: 20px;
   }
 }
+
+.whatsappIcon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.chatForm {
+  margin-top: 1rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 280px;
+  animation: tooltipSlide 0.3s ease-out;
+}
+
+.chatForm h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+.chatForm input,
+.chatForm textarea {
+  padding: 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.chatForm textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.sendButton {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sendButton:hover {
+  background-color: #128C7E;
+}
+
+@media (max-width: 480px) {
+  .chatForm {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .chatForm input,
+  .chatForm textarea {
+    font-size: 0.85rem;
+  }
+
+  .sendButton {
+    font-size: 0.85rem;
+  }
+}
+

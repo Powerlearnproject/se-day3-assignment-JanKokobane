@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Twitter, Facebook, Instagram, ArrowUp } from 'lucide-react';
 import styles from './Footer.module.css';
+import Logo from '../../assets/Logo.png'
 
 const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -55,10 +56,9 @@ const Footer: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.brandSection}>
-            <div className={styles.logo}>
-              <span className={styles.logoMain}>Crystal Faith</span>
-              <span className={styles.logoSub}>Projects</span>
-            </div>
+
+            <a href="#home"><div className={styles.logoImage}><img src={Logo} /></div></a>
+            
             <p className={styles.brandDescription}>
               Crafting beautiful, functional furniture and providing expert installation 
               services across South Africa for over 8 years. Your vision, our craftsmanship.

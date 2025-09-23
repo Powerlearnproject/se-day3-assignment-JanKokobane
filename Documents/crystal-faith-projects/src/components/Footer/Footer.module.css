@@ -22,25 +22,8 @@
   flex-direction: column;
 }
 
-.logo {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-  margin-bottom: 1.5rem;
-}
-
-.logoMain {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #8B4513;
-  margin-bottom: -2px;
-}
-
-.logoSub {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #60a5fa;
-  margin-left: 2px;
+.logoImage {
+  display: none;
 }
 
 .brandDescription {
